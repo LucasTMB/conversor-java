@@ -13,7 +13,7 @@ public class CurrencyConverter {
         return result;
     }
 
-    public boolean getRealTo(double value, String toCurrency) {
+    public boolean setRealTo(double value, String toCurrency) {
         this.value = value;
         this.fromCurrency = "BRL";
         this.toCurrency = toCurrency;
@@ -37,7 +37,7 @@ public class CurrencyConverter {
         }
     }
 
-    public boolean getToReal(double value, String fromCurrency) {
+    public boolean setToReal(double value, String fromCurrency) {
         this.value = value;
         this.fromCurrency = fromCurrency;
         this.toCurrency = "BRL";

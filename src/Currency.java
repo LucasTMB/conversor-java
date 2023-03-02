@@ -26,52 +26,52 @@ public class Currency {
 
             switch (currencies) {
                 case "Real para Dólar":
-                    cc.getRealTo(value, "USD");
+                    cc.setRealTo(value, "USD");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Real convertido para Dólar: $ " + df.format(result));
                     break;
                 case "Real para Euro":
-                    cc.getRealTo(value, "EUR");
+                    cc.setRealTo(value, "EUR");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Real convertido para Euro: € " + df.format(result));
                     break;
                 case "Real para Libra Esterlina":
-                    cc.getRealTo(value, "GBP");
+                    cc.setRealTo(value, "GBP");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Real convertido para Libra Esterlina: £ " + df.format(result));
                     break;
                 case "Real para Peso Argentino":
-                    cc.getRealTo(value, "ARS");
+                    cc.setRealTo(value, "ARS");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Real convertido para Peso Argentino: (ARS) " + df.format(result));
                     break;
                 case "Real para Peso Chileno":
-                    cc.getRealTo(value, "CLP");
+                    cc.setRealTo(value, "CLP");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Real convertido para Peso Chileno: (CLP) " + df.format(result));
                     break;
                 case "Dólar para Real":
-                    cc.getToReal(value, "USD");
+                    cc.setToReal(value, "USD");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Dólar convertido para Real: R$ " + df.format(result));
                     break;
                 case "Euro para Real":
-                    cc.getToReal(value, "EUR");
+                    cc.setToReal(value, "EUR");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Euro convertido para Real: R$ " + df.format(result));
                     break;
                 case "Libra Esterlina para Real":
-                    cc.getToReal(value, "GBP");
+                    cc.setToReal(value, "GBP");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Libra Esterlina convertida para Real: R$ " + df.format(result));
                     break;
                 case "Peso Argentino para Real":
-                    cc.getToReal(value, "ARS");
+                    cc.setToReal(value, "ARS");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Peso Argentino convertido para Real: R$ " + df.format(result));
                     break;
                 case "Peso Chileno para Real":
-                    cc.getToReal(value, "CLP");
+                    cc.setToReal(value, "CLP");
                     result = cc.getResult();
                     JOptionPane.showMessageDialog(null, "Peso Chileno convertido para Real: R$ " + df.format(result));
                     break;
