@@ -10,7 +10,7 @@ public class Screen extends JFrame {
         if (type == "Conversor de Moeda") {
             new Currency();
         } else if (type == "Conversor de Temperatura") {
-            System.out.println("Em produção");
+            new Temperature();
         }
     }
 
@@ -23,7 +23,7 @@ public class Screen extends JFrame {
         if (type == "Conversor de Moeda") {
             new Currency();
         } else if (type == "Conversor de Temperatura") {
-            System.out.println("Em produção");
+            new Temperature();
         }
     }
 }
