@@ -48,7 +48,7 @@ public class Temperature {
                     JOptionPane.showMessageDialog(null, value + " K convertido para Fahrenheit: " + df.format(result) + " °F");
                     break;
                 default:
-                    System.out.println("Algo está errado");
+                    System.err.println("Erro: valor inválido para a variável!");
                     break;
             }
         }
