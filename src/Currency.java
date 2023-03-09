@@ -11,10 +11,18 @@ public class Currency {
         Double result = null;
 
         try {
-            String[] currency = {"Real para Dólar", "Real para Euro", "Real para Libra Esterlina",
-                    "Real para Peso Argentino", "Real para Peso Chileno", "Dólar para Real",
-                    "Euro para Real", "Libra Esterlina para Real", "Peso Argentino para Real",
-                    "Peso Chileno para Real"};
+            String[] currency = {
+                    "Real para Dólar",
+                    "Real para Euro",
+                    "Real para Libra Esterlina",
+                    "Real para Peso Argentino",
+                    "Real para Peso Chileno",
+                    "Dólar para Real",
+                    "Euro para Real",
+                    "Libra Esterlina para Real",
+                    "Peso Argentino para Real",
+                    "Peso Chileno para Real"
+            };
 
             String currencies = JOptionPane.showInputDialog(null, "Escolha a moeda para converter", "Conversor de Moedas",
                     JOptionPane.PLAIN_MESSAGE, null, currency, null).toString();

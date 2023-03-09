@@ -7,73 +7,374 @@ public class Speed {
 
         try {
             String[] speed = {
-                    "m/s para km/s",
-                    "m/s para km/h",
-                    "m/s para mm/s",
-                    "m/s para µm/s",
-                    "m/s para mi/s",
-                    "m/s para mph",
-                    "m/s para ft/s",
-                    "km/s para m/s",
-                    "km/s para km/h",
-                    "km/s para mm/s",
-                    "km/s para µm/s",
-                    "km/s para mi/s",
-                    "km/s para mph",
-                    "km/s para ft/s",
-                    "km/h para m/s",
-                    "km/h para km/s",
-                    "km/h para mm/s",
-                    "km/h para µm/s",
-                    "km/h para mi/s",
-                    "km/h para mph",
-                    "km/h para ft/s",
-                    "mm/s para m/s",
-                    "mm/s para km/s",
-                    "mm/s para km/h",
-                    "mm/s para µm/s",
-                    "mm/s para mi/s",
-                    "mm/s para mph",
-                    "mm/s para ft/s",
-                    "µm/s para m/s",
-                    "µm/s para km/s",
-                    "µm/s para km/h",
-                    "µm/s para mm/s",
-                    "µm/s para mi/s",
-                    "µm/s para mph",
-                    "µm/s para ft/s",
-                    "mi/s para m/s",
-                    "mi/s para km/s",
-                    "mi/s para km/h",
-                    "mi/s para mm/s",
-                    "mi/s para µm/s",
-                    "mi/s para mph",
-                    "mi/s para ft/s",
-                    "mph para m/s",
-                    "mph para km/s",
-                    "mph para km/h",
-                    "mph para mm/s",
-                    "mph para µm/s",
-                    "mph para mi/s",
-                    "mph para ft/s",
-                    "ft/s para m/s",
-                    "ft/s para km/s",
-                    "ft/s para km/h",
-                    "ft/s para mm/s",
-                    "ft/s para µm/s",
-                    "ft/s para mi/s",
-                    "ft/s para mph"
+                    "m/s",
+                    "km/s",
+                    "km/h",
+                    "mm/s",
+                    "µm/s",
+                    "mi/s",
+                    "mph",
+                    "ft/s"
             };
 
-            String speeds = JOptionPane.showInputDialog(null, "Escolha a conversão de medida de velocidade", "Conversor de Velocidade",
+            String fromSpeed = JOptionPane.showInputDialog(null, "Escolha a unidade de velocidade de entrada", "Conversor de Velocidade",
                     JOptionPane.PLAIN_MESSAGE, null, speed, null).toString();
 
-            String input = JOptionPane.showInputDialog("Digite o valor");
+            if (fromSpeed == null) {
+                return;
+            }
+
+            String toSpeed = JOptionPane.showInputDialog(null, "Escolha a unidade de velocidade de saída", "Conversor de Velocidade",
+                    JOptionPane.PLAIN_MESSAGE, null, speed, null).toString();
+
+            if (toSpeed == null) {
+                return;
+            }
+
+            String input = JOptionPane.showInputDialog("Digite a Velocidade em " + fromSpeed);
             value = Double.parseDouble(input);
 
             SpeedConverter sc = new SpeedConverter();
 
-            //ainda não finalizado
+            switch (fromSpeed) {
+                case "m/s":
+                    switch (toSpeed) {
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para km/s: " + result + " km/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para km/h: " + result + " km/h");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para mph: " + result + " mph");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " m/s convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                    break;
+                case "km/s":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para km/h: " + result + " km/h");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para mph: " + result + " mph");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/s convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                    break;
+                case "km/h":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para km/h: " + result + " km/s");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para mph: " + result + " mph");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " km/h convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                    break;
+                case "mm/s":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para km/h: " + result + " km/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para km/h: " + result + " km/h");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para mph: " + result + " mph");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mm/s convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                    break;
+                case "µm/s":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para km/h: " + result + " km/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para km/h: " + result + " km/h");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para mph: " + result + " mph");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " µm/s convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                    break;
+                case "mi/s":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para km/h: " + result + " km/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para km/h: " + result + " km/h");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para mph: " + result + " mph");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mi/s convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                    break;
+                case "mph":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para km/h: " + result + " km/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para km/h: " + result + " km/h");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "ft/s":
+                            sc.metersPerSecondTo(value, "ft/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " mph convertido para ft/s: " + result + " ft/s");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                case "ft/s":
+                    switch (toSpeed) {
+                        case "m/s":
+                            sc.metersPerSecondTo(value, "m/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para m/s: " + result + " m/s");
+                            break;
+                        case "km/s":
+                            sc.metersPerSecondTo(value, "km/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para km/h: " + result + " km/s");
+                            break;
+                        case "km/h":
+                            sc.metersPerSecondTo(value, "km/h");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para km/h: " + result + " km/h");
+                            break;
+                        case "mm/s":
+                            sc.metersPerSecondTo(value, "mm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para mm/s: " + result + " mm/s");
+                            break;
+                        case "µm/s":
+                            sc.metersPerSecondTo(value, "µm/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para µm/s: " + result + " µm/s");
+                            break;
+                        case "mi/s":
+                            sc.metersPerSecondTo(value, "mi/s");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para mi/s: " + result + " mi/s");
+                            break;
+                        case "mph":
+                            sc.metersPerSecondTo(value, "mph");
+                            result = sc.getResult();
+                            JOptionPane.showMessageDialog(null, value + " ft/s convertido para mph: " + result + " mph");
+                            break;
+                        default:
+                            System.err.println("Erro: valor inválido para a variável!");
+                            break;
+                    }
+                default:
+                    System.err.println("Erro: valor inválido para a variável!");
+                    break;
+            }
         }
         catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "Você não digitou um número", "ERRO", JOptionPane.ERROR_MESSAGE);
