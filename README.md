@@ -2,7 +2,7 @@
 
 Este projeto é um conversor de moedas, temperatura e velocidade, desenvolvido em Java. Para o conversor de moedas foi utilizado a API Awesome para obter taxas de câmbio de várias moedas. A interface gráfica foi desenvolvida com a biblioteca Swing.
 
-## Funcionalidades do Conversor de Moedas
+## 💵 Funcionalidades do Conversor de Moedas
 
 O conversor de moedas permite que o usuário converta valores entre várias moedas tendo o Real como base. Moedas incluídas:
 
@@ -15,11 +15,15 @@ O conversor de moedas permite que o usuário converta valores entre várias moed
 
 O usuário pode seleciona qual moeda será convertida, tendo como base o Real, e o conversor calcula a taxa de câmbio e exibe o valor convertido.
 
-## Funcionalidades do Conversor de Temperatura
+## 🌡️ Funcionalidades do Conversor de Temperatura
 
-O conversor de temperatura permite que o usuário converta valores entre Celsius, Fahrenheit e Kelvin.
+O conversor de temperatura permite que o usuário converta valores entre: 
 
-## Funcionalidades do Conversor de Velocidade
+* Celsius
+* Fahrenheit
+* Kelvin
+
+## 💨 Funcionalidades do Conversor de Velocidade
 
 O conversor de velocidade permite que o usuário converta valores entre diferentes medidas de velocidade. Medidas incluídas:
 
@@ -32,11 +36,11 @@ O conversor de velocidade permite que o usuário converta valores entre diferent
 * Milhas por hora (mph)
 * Pés por segundo (ft/s)
 
-## Pré-requisitos
+## 📑 Pré-requisitos
 
 Para executar o conversor de moedas (e os outros conversores), você precisa ter o Java Development Kit (JDK) instalado em seu computador.
 
-## Como executar o projeto
+## 🚀 Como executar o projeto
 
 1. Clone este repositório em seu computador: 
 ```
@@ -46,7 +50,7 @@ https://github.com/LucasTMB/conversor-java.git
 3. Execute o arquivo `Screen.java` na pasta `src`.
 4. A interface gráfica será exibida e o usuário poderá selecionar qual conversor deseja utilizar através do menu.
 
-## Como contribuir
+## 🤝 Como contribuir
 
 Se você quiser contribuir para o projeto, siga estes passos:
 
