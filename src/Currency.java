@@ -1,10 +1,12 @@
 import javax.swing.*;
+import java.io.IOException;
 import java.text.DecimalFormat;
 
 public class Currency {
     DecimalFormat df = new DecimalFormat();
+    CurrencyConverter cc;
 
-    public Currency() {
+    public Currency()  {
         df.applyPattern("#,##0.00");
 
         Double value = null;
@@ -30,7 +32,11 @@ public class Currency {
             String input = JOptionPane.showInputDialog("Digite o Valor:");
             value = Double.parseDouble(input);
 
-            CurrencyConverter cc = new CurrencyConverter();
+            try {
+                cc = new CurrencyConverter();
+            } catch (IOException | InterruptedException e) {
+                System.out.println("Erro ao criar o conversor de moedas: " + e.getMessage());
+            }
 
             switch (currencies) {
                 case "Real para Dólar":
