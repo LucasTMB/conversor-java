@@ -22,9 +22,9 @@ public class SpeedConverter {
             } else if (toSpeed.equals("mph")) {
                 result = (value / 1609.344) * 3600;
             } else if (toSpeed.equals("ft/s")) {
-                result = value * 328084;
+                result = value * 3.281;
             } else if (toSpeed.equals("kn")) {
-                result = value * 1944;
+                result = value * 1.944;
             }
             return true;
         } else {
@@ -45,7 +45,7 @@ public class SpeedConverter {
             } else if (toSpeed.equals("ft/s")) {
                 result = (value / 3.6) * 3.28084;
             } else if (toSpeed.equals("kn")) {
-                result = value / 1852;
+                result = value / 1.852;
             }
             return true;
         } else {
@@ -66,7 +66,7 @@ public class SpeedConverter {
             } else if (toSpeed.equals("ft/s")) {
                 result = value * 1.46667;
             } else if (toSpeed.equals("kn")) {
-                result = value / 1151;
+                result = value / 1.151;
             }
             return true;
         } else {
@@ -87,7 +87,7 @@ public class SpeedConverter {
             } else if (toSpeed.equals("mph")) {
                 result = value * 0.681818;
             } else if (toSpeed.equals("kn")) {
-                result = value / 1688;
+                result = value / 1.688;
             }
             return true;
         } else {
@@ -102,13 +102,13 @@ public class SpeedConverter {
 
         if (!toSpeed.equals("kn")) {
             if(toSpeed.equals("m/s")) {
-                result = value / 1944;
+                result = value / 1.944;
             } else if (toSpeed.equals("km/h")) {
-                result = value * 1852;
+                result = value * 1.852;
             } else if (toSpeed.equals("mph")) {
-                result = value * 1151;
+                result = value * 1.151;
             } else if (toSpeed.equals("ft/s")) {
-                result = value * 1688;
+                result = value * 1.688;
             }
             return true;
         } else {

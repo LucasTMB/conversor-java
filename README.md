@@ -28,13 +28,10 @@ O conversor de temperatura permite que o usuário converta valores entre:
 O conversor de velocidade permite que o usuário converta valores entre diferentes medidas de velocidade. Medidas incluídas:
 
 * Metros por segundo (m/s)
-* Quilômetros por segundo (km/s)
 * Quilômetros por hora (km/h)
-* Milimetros por segundo (mm/s)
-* Micrômetros por segundo (µm/s)
-* Milhas por segundo (mi/s)
 * Milhas por hora (mph)
 * Pés por segundo (ft/s)
+* Nó náutico (kn)
 
 ## 📑 Pré-requisitos
 
