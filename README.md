@@ -1,5 +1,7 @@
 # Conversor Java
 
+![badge_conversor](https://user-images.githubusercontent.com/94722696/226072316-e95bede4-b82e-45b5-8b3e-64602b0cee0c.png)
+
 Este projeto é um conversor de moedas, temperatura e velocidade, desenvolvido em Java. Para o conversor de moedas foi utilizado a API Awesome para obter taxas de câmbio de várias moedas. A interface gráfica foi desenvolvida com a biblioteca Swing.
 
 ## 💵 Funcionalidades do Conversor de Moedas
